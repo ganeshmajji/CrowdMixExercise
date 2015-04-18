@@ -1,0 +1,21 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.8
+version = '1.0'
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.crowdmix.exercise.Launcher'
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile 'junit:junit:4.+'
+    testCompile "org.mockito:mockito-core:1.+"
+    testCompile 'org.powermock:powermock-mockito-release-full:1.6.+'
+}
