@@ -42,14 +42,14 @@ public class OutputFormatterTest {
 
         // Then
         assertThat(result, is(
-                "foo -> hello, world! (3 days ago)" + lineSeparator() +
-                "bar -> good morning.. (1 day ago)" + lineSeparator() +
-                "foo -> i love this stuff :D (5 hours ago)" + lineSeparator() +
-                "foo -> ~feeling high~ (1 hour ago)" + lineSeparator() +
-                "baz -> hungry as hell :( (15 minutes ago)" + lineSeparator() +
-                "baz -> hmm.. yummy curry :P (1 minute ago)" + lineSeparator() +
-                "foo -> need some more.. (10 seconds ago)" + lineSeparator() +
-                "bar -> WFH (1 second ago)"
+                "foo - hello, world! (3 days ago)" + lineSeparator() +
+                "bar - good morning.. (1 day ago)" + lineSeparator() +
+                "foo - i love this stuff :D (5 hours ago)" + lineSeparator() +
+                "foo - ~feeling high~ (1 hour ago)" + lineSeparator() +
+                "baz - hungry as hell :( (15 minutes ago)" + lineSeparator() +
+                "baz - hmm.. yummy curry :P (1 minute ago)" + lineSeparator() +
+                "foo - need some more.. (10 seconds ago)" + lineSeparator() +
+                "bar - WFH (1 second ago)"
         ));
     }
 
@@ -62,7 +62,7 @@ public class OutputFormatterTest {
         String result = formatter.format(messages);
 
         // Then
-        assertThat(result, is("foo -> knock, knock! (0 seconds ago)"));
+        assertThat(result, is("foo - knock, knock! (0 seconds ago)"));
     }
 
     @Test

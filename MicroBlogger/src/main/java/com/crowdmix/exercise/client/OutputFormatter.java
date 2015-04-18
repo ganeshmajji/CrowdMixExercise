@@ -26,7 +26,7 @@ public class OutputFormatter implements MessageFormatter {
 
     @Override
     public String format(User publisher, String message, Instant timestamp) {
-        return publisher.getName() + " -> " + message + " (" + describe(timestamp) + ")";
+        return publisher.getName() + " - " + message + " (" + describe(timestamp) + ")";
     }
 
     private String describe(Instant start) {
